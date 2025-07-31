@@ -28,3 +28,6 @@ body {
   color: #000;
   font-weight: bold;
 }
+::selection {
+	background:rgb(242, 242, 44);
+}
