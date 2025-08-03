@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +17,6 @@
     <style>
       
     </style>
-  </head>
   <body>
     <!--   -->
     <h1 class="p-6 text-2xl font-semibold ">
@@ -26,9 +25,16 @@
     <p class="text-1xl dark:text-gray-400  pl-6">
       Please reach out to our friendly team via layecel@.com if you have any questions.
     </p>
+    <div id="loader" class="flex items-center justify-center h-screen bg-white">
+      <div class="text-center">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500 mb-4 mx-auto"></div>
+        <p class="text-gray-600 text-lg font-semibold">Cargando...</p>
+      </div>
+    </div>
+    <div id="mainContent" class="hidden">
     <div class="p-6 relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
-      <table class="w-full text-left table-auto min-w-max">
-        <theadr>
+       <table class="w-full text-left table-auto min-w-max">
+        <thead>
           <tr>
             <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
               <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
@@ -56,44 +62,11 @@
           </tr>
         </thead>
         <tbody>
-            <tr>
-              <td class="p-6 border-b border-blue-gray-50">
-                <div class="flex flex-col">
-                  <p
-                    class="block text-sm antialiased font-normal font-bold leading-normal text-blue-gray-900">
-                    1 mar, 2024
-                  </p>
-                </div>  
-              </td>
-              <td class="p-6 border-b border-blue-gray-50">
-                <div class="w-max">
-                  <div class="relative grid border-b items-center px-2 py-1 text-sm font-bold text-green-700 rounded-2xl select-none whitespace-nowrap bg-green-500/20">
-                    <span class="">Paid</span>
-                  </div>
-                </div>
-              </td>
-              <td class="p-6 border-b border-blue-gray-50">
-              <p class="block text-sm antialiased font-normal font-bold leading-normal text-blue-gray-900">
-                $12.03
-              </p>
-              </td>
-              <td class="p-6 border-b border-blue-gray-50">
-                <p class="block text-sm antialiased font-normal font-bold leading-normal text-blue-gray-900">
-                Profesional
-                </p>
-              </td>
-              <td class="p-6 border-b border-blue-gray-50">
-                <p
-                    class="block text-sm antialiased font-mediums">
-                  <a href="http://" class="block text-sm antialiased font-medium leading-normal text-blue-600" target="_blank" rel="noopener noreferrer">
-                    Download
-                  </a>
-                </p>
-              </td>
-            </tr>
+             
         </tbody>
-      </table>
+       </table>
       </div>
+    </div>
     <!--  -->
     <div class="credits" data-gfe-screenshot-exclude="true">
       A challenge by
