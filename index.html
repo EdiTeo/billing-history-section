@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en" class>
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GreatFrontEnd Projects</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,70 +18,71 @@
     <style>
       
     </style>
-  <body>
-    <!--   -->
-    <h1 class="p-6 text-2xl font-semibold ">
-       Payment History
-    </h1>
-    <p class="text-1xl dark:text-gray-400  pl-6">
-      Please reach out to our friendly team via layecel@.com if you have any questions.
-    </p>
-    <div id="loader" class="flex items-center justify-center h-screen bg-white">
-      <div class="text-center">
-        <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500 mb-4 mx-auto"></div>
-        <p class="text-gray-600 text-lg font-semibold">Cargando...</p>
+  <body class="">
+      <!--   -->
+      <h1 class="p-6 text-2xl font-semibold ">
+        Payment History <button id="darkMode">🌓</button>         
+      </h1>
+      
+      <p class="text-1xl dark:text-gray-400  pl-6">
+        Please reach out to our friendly team via layecel@.com if you have any questions.
+      </p>
+      <div id="loader" class="flex items-center justify-center h-screen bg-white">
+        <div class="text-center">
+          <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-500 mb-4 mx-auto"></div>
+          <p class="text-gray-600 text-lg font-semibold">Cargando...</p>
+        </div>
       </div>
-    </div>
-    <div id="mainContent" class="hidden">
-    <div class="p-6 relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
-       <table class="w-full text-left table-auto min-w-max">
-        <thead>
-          <tr>
-            <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
-              <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
-                Invoice
-              </p>
-            </th>
-            <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
-              <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
-                Status
-              </p>
-            </th>
-            <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
-              <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60"> 
-              Amount
-              </p> 
-            </th>
-            <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
-              <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
-              Plan
-              </p>
-            </th>
-            <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
-              &nbsp;
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-             
-        </tbody>
-       </table>
+      <div id="mainContent" class="hidden">
+      <div class="p-6 relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+        <table class="w-full text-left table-auto min-w-max">
+          <thead>
+            <tr>
+              <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
+                <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
+                  Invoice
+                </p>
+              </th>
+              <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
+                <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
+                  Status
+                </p>
+              </th>
+              <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
+                <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60"> 
+                Amount
+                </p> 
+              </th>
+              <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
+                <p class="block text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-60">
+                Plan
+                </p>
+              </th>
+              <th class="p-6 border-y border-blue-gray-100 bg-blue-gray-50/50">
+                &nbsp;
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+              
+          </tbody>
+        </table>
+        </div>
       </div>
-    </div>
-    <!--  -->
-    <div class="credits" data-gfe-screenshot-exclude="true">
-      A challenge by
-      <a
-        href=""
-        target="_blank"
-        >Projects</a
-      >. Built by
-      <a
-        href="https://github.com/EdiTeo/billing-history-section"
-        target="_blank"
-        >EdiTeo</a
-      >.
-    </div>
+      <!--  -->
+      <div class="credits" data-gfe-screenshot-exclude="true">
+        A challenge by
+        <a
+          href=""
+          target="_blank"
+          >Projects</a
+        >. Built by
+        <a
+          href="https://github.com/EdiTeo/billing-history-section"
+          target="_blank"
+          >EdiTeo</a
+        >.
+      </div>
     <script src="js/index.js"></script>
   </body>
 </html>

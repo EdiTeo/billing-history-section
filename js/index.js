@@ -15,6 +15,7 @@ document.addEventListener(
             const json = await res.json();
             const data = json.data;
             tbody.innerHTML=''
+             
             data.forEach(i => {
                 const date = new Date(i.created_at).toLocaleDateString('en-US',{
                     year:'numeric',month:'short',day:'numeric'
@@ -63,3 +64,15 @@ document.addEventListener(
         }
     }
 )
+//Para detectar el tema del sistema
+//window.matchMedia() 
+document.addEventListener('DOMContentLoaded',()=>{
+    const modeDark = document.getElementById('darkMode')
+    const preferencia = window.matchMedia('(prefers-color-scheme:dark)').matches;
+    if(preferencia){document.documentElement.classList.add('dark')}
+    
+    modeDark.addEventListener('click',()=>{
+        document.documentElement.classList.toggle('dark')
+    })
+})
+

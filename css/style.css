@@ -1,3 +1,29 @@
+html.dark {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    .dark .bg-white {
+      background-color: #374151;
+    }
+    .dark .bg-blue-gray-50 {
+      background-color: #4b5563;
+    }
+    .dark .text-gray-600 {
+      color: #d1d5db;
+    }
+    .dark .text-blue-gray-900 {
+      color: #e5e7eb;
+    }
+    .dark .border-blue-gray-50 {
+      border-color: #4b5563;
+    }
+    .dark .bg-green-500\/20 {
+      background-color: #16653433; 
+    }
+    .dark .text-blue-600 {
+      color: #60a5fa;
+    }
+
 /* Put any custom CSS styles here.  */
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
 body {
@@ -31,3 +57,4 @@ body {
 ::selection {
 	background:rgb(242, 242, 44);
 }
+ 
