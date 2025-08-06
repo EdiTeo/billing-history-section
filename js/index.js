@@ -3,9 +3,8 @@
 // alt+shift+flecha abajo  copiar
 // ctrl+shift+k  borrar
 
-const dercarga = document.getElementById('descargar');
-document.addEventListener(
-    'DOMContentLoaded', async()=>{
+
+async function historyLoad(){
       const mainContent = document.getElementById('mainContent');
         const loader = document.getElementById('loader');
         const tbody = document.querySelector('tbody');
@@ -72,11 +71,10 @@ document.addEventListener(
           loader.classList.add('hidden');
           mainContent.classList.remove('hidden');
         }
-    }
-)
+}
 //Para detectar el tema del sistema
 //window.matchMedia() 
-document.addEventListener('DOMContentLoaded',()=>{
+function configDarkMode(){
     const modeDark = document.getElementById('darkMode')
     const preferencia = window.matchMedia('(prefers-color-scheme:dark)').matches;
     if(preferencia){document.documentElement.classList.add('dark')}
@@ -84,4 +82,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     modeDark.addEventListener('click',()=>{
         document.documentElement.classList.toggle('dark')
     })
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  configDarkMode();
+  historyLoad();
 })
