@@ -61,7 +61,7 @@ document.addEventListener(
             });
         } catch (error) {
             console.error('Error al obtener datos de billing',error);
-            document.getElementById('error').innerHTML=`
+            document.getElementById('mainContent').innerHTML=`
             <div class="flex justify-center p-6">
               <div class="p-2 bg-red-100 items-center text-red-600 leading-none lg:rounded-full flex lg:inline-flex mx-auto w-max" role="alert">
                   <span class="flex rounded-full dark:bg-white px-2 py-1 text-xs font-bold mr-3">Error</span>
