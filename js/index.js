@@ -5,7 +5,8 @@
 window.addEventListener('load', () => {
     document.getElementById('loader').classList.add('hidden');
     document.getElementById('mainContent').classList.remove('hidden');
-  });
+});
+
 const dercarga = document.getElementById('descargar');
 document.addEventListener(
     'DOMContentLoaded', async()=>{
@@ -60,7 +61,14 @@ document.addEventListener(
             });
         } catch (error) {
             console.error('Error al obtener datos de billing',error);
-
+            document.getElementById('error').innerHTML=`
+            <div class="flex justify-center p-6">
+              <div class="p-2 bg-red-100 items-center text-red-600 leading-none lg:rounded-full flex lg:inline-flex mx-auto w-max" role="alert">
+                  <span class="flex rounded-full dark:bg-white px-2 py-1 text-xs font-bold mr-3">Error</span>
+                  <span class="block sm:inline">There was a problem, try again later.</span>
+              </div>
+            </div>     
+            `
         }
     }
 )
@@ -75,4 +83,3 @@ document.addEventListener('DOMContentLoaded',()=>{
         document.documentElement.classList.toggle('dark')
     })
 })
-
