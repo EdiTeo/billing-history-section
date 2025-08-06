@@ -2,21 +2,19 @@
 // You may ignore this file and delete if if JavaScript is not required for your challenge.
 // alt+shift+flecha abajo  copiar
 // ctrl+shift+k  borrar
-window.addEventListener('load', () => {
-    document.getElementById('loader').classList.add('hidden');
-    document.getElementById('mainContent').classList.remove('hidden');
-});
 
 const dercarga = document.getElementById('descargar');
 document.addEventListener(
     'DOMContentLoaded', async()=>{
+      const mainContent = document.getElementById('mainContent');
+        const loader = document.getElementById('loader');
         const tbody = document.querySelector('tbody');
         try {
             const res = await fetch('https://www.greatfrontend.com/api/projects/challenges/account/billing/history')
             const json = await res.json();
             const data = json.data;
             tbody.innerHTML=''
-             
+            const fragment = document.createDocumentFragment();
             data.forEach(i => {
                 const date = new Date(i.created_at).toLocaleDateString('en-US',{
                     year:'numeric',month:'short',day:'numeric'
@@ -57,18 +55,22 @@ document.addEventListener(
                 </p>
               </td>
                 `
-                tbody.appendChild(row)
+                fragment.appendChild(row)
             });
+            tbody.appendChild(fragment)
         } catch (error) {
             console.error('Error al obtener datos de billing',error);
-            document.getElementById('mainContent').innerHTML=`
+            mainContent.innerHTML=`
             <div class="flex justify-center p-6">
               <div class="p-2 bg-red-100 items-center text-red-600 leading-none lg:rounded-full flex lg:inline-flex mx-auto w-max" role="alert">
                   <span class="flex rounded-full dark:bg-white px-2 py-1 text-xs font-bold mr-3">Error</span>
                   <span class="block sm:inline">There was a problem, try again later.</span>
               </div>
             </div>     
-            `
+            `;
+        }finally{
+          loader.classList.add('hidden');
+          mainContent.classList.remove('hidden');
         }
     }
 )
