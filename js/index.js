@@ -48,7 +48,7 @@ async function historyLoad(){
               <td class="p-6 border-b border-blue-gray-50">
                 <p
                     class="block text-sm antialiased font-mediums">
-                  <a id='descargar' href="${i.invoice_url}" class="block text-sm antialiased font-medium leading-normal text-blue-600" target="_blank" rel="noopener noreferrer">
+                  <a href="${i.invoice_url}" class="block text-sm antialiased font-medium leading-normal text-blue-600" target="_blank" rel="noopener noreferrer">
                     Download
                   </a>
                 </p>
