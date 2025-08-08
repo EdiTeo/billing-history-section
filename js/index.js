@@ -14,6 +14,17 @@ async function historyLoad(){
             const data = json.data;
             tbody.innerHTML=''
             const fragment = document.createDocumentFragment();
+            //Si empty
+            data = [];
+            if(!data || data.length==0){
+              const vacio = document.getElementById('vacio')
+              vacio.innerHTML=`
+                <div class="">
+                  <h1 class="text-lg font-bold text-blue-gray-900">No payment history available</h1>
+                  <p class="text-sm text-blue-gray-600">Once you start making trasactions your payment details will appear here</p>
+                </div>
+              `
+            }
             data.forEach(i => {
                 const date = new Date(i.created_at).toLocaleDateString('en-US',{
                     year:'numeric',month:'short',day:'numeric'
@@ -88,3 +99,5 @@ document.addEventListener('DOMContentLoaded',()=>{
   configDarkMode();
   historyLoad();
 })
+//En caso de estar vacio
+
