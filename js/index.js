@@ -15,7 +15,7 @@ async function historyLoad(){
             tbody.innerHTML=''
             const fragment = document.createDocumentFragment();
             //Si empty
-            data = [];
+            //data = [];
             if(!data || data.length==0){
               const vacio = document.getElementById('vacio')
               vacio.innerHTML=`
